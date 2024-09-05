@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="biographiesCount"
+            type="Integer" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="isOwnProfile"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.dashboard.profile.ViewProfileActivity">
+
+        <include
+            android:id="@+id/toolbarViewProfile"
+            layout="@layout/layout_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbarViewProfile">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/dp_15" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/dp_15" />
+
+                <com.familypedia.utils.MediumTextViewGoldPlay
+                    android:id="@+id/tvPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="@string/photo"
+                    android:textColor="@color/color_dove_grey"
+                    android:textSize="@dimen/sp_15"
+                    app:layout_constraintStart_toEndOf="@id/guidelineStart"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfileImage"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_60"
+                    android:src="@mipmap/ic_profile_pic"
+                    app:layout_constraintBottom_toBottomOf="@id/tvPhoto"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+                    app:layout_constraintTop_toTopOf="@id/tvPhoto" />
+
+                <com.familypedia.utils.MediumTextViewGoldPlay
+                    android:id="@+id/tvNameStatic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:text="@string/name"
+                    android:textColor="@color/color_dove_grey"
+                    android:textSize="@dimen/sp_15"
+                    app:layout_constraintStart_toEndOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@id/tvPhoto" />
+
+                <com.familypedia.utils.MediumTextViewGoldPlay
+                    android:id="@+id/tvName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:gravity="end"
+                    android:text="@string/n_a"
+                    android:textColor="@color/color_ebony"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="@id/tvNameStatic"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+                    app:layout_constraintStart_toEndOf="@id/tvNameStatic"
+                    app:layout_constraintTop_toTopOf="@id/tvNameStatic" />
+
+                <com.familypedia.utils.MediumTextViewGoldPlay
+                    android:id="@+id/tvEmailStatic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="@string/email"
+                    android:textColor="@color/color_dove_grey"
+                    android:textSize="@dimen/sp_15"
+                    android:visibility="@{isOwnProfile?View.VISIBLE:View.GONE}"
+                    app:layout_constraintStart_toEndOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@id/tvNameStatic" />
+
+                <com.familypedia.utils.MediumTextViewGoldPlay
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/n_a"
+                    android:textColor="@color/color_ebony"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="@{isOwnProfile?View.VISIBLE:View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="@id/tvEmailStatic"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+                    app:layout_constraintTop_toTopOf="@id/tvEmailStatic" />
+
+                <com.familypedia.utils.MediumTextViewGoldPlay
+                    android:id="@+id/tvGenderStatic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="@string/gender"
+                    android:textColor="@color/color_dove_grey"
+                    android:textSize="@dimen/sp_15"
+                    android:visibility="@{isOwnProfile?View.VISIBLE:View.GONE}"
+                    app:layout_constraintStart_toEndOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@id/tvEmailStatic" />
+
+                <com.familypedia.utils.MediumTextViewGoldPlay
+                    android:id="@+id/tvGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/n_a"
+                    android:textColor="@color/color_ebony"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="@{isOwnProfile?View.VISIBLE:View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="@id/tvGenderStatic"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+                    app:layout_constraintTop_toTopOf="@id/tvGenderStatic" />
+
+                <com.familypedia.utils.MediumTextViewGoldPlay
+                    android:id="@+id/tvPhoneNumberStatic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="@string/phone_number"
+                    android:textColor="@color/color_dove_grey"
+                    android:textSize="@dimen/sp_15"
+                    android:visibility="@{isOwnProfile?View.VISIBLE:View.GONE}"
+                    app:layout_constraintStart_toEndOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@id/tvGenderStatic" />
+
+                <com.familypedia.utils.MediumTextViewGoldPlay
+                    android:id="@+id/tvPhoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/n_a"
+                    android:textColor="@color/color_ebony"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="@{isOwnProfile?View.VISIBLE:View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="@id/tvPhoneNumberStatic"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+                    app:layout_constraintTop_toTopOf="@id/tvPhoneNumberStatic" />
+
+                <com.familypedia.utils.MediumTextViewGoldPlay
+                    android:id="@+id/tvDOBStatic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="@string/d_o_b"
+                    android:textColor="@color/color_dove_grey"
+                    android:textSize="@dimen/sp_15"
+                    android:visibility="@{isOwnProfile?View.VISIBLE:View.GONE}"
+                    app:layout_constraintStart_toEndOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@id/tvPhoneNumberStatic" />
+
+                <com.familypedia.utils.MediumTextViewGoldPlay
+                    android:id="@+id/tvDOB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/n_a"
+                    android:textColor="@color/color_ebony"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="@{isOwnProfile?View.VISIBLE:View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDOBStatic"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+                    app:layout_constraintTop_toTopOf="@id/tvDOBStatic" />
+
+                <com.familypedia.utils.MediumTextViewGoldPlay
+                    android:id="@+id/tvCountryStatic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:singleLine="true"
+                    android:text="@string/country"
+                    android:textColor="@color/color_dove_grey"
+                    android:textSize="@dimen/sp_15"
+                    android:visibility="@{isOwnProfile?View.VISIBLE:View.GONE}"
+                    app:layout_constraintEnd_toStartOf="@id/tvCountry"
+                    app:layout_constraintStart_toEndOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@id/tvDOBStatic" />
+
+                <com.familypedia.utils.MediumTextViewGoldPlay
+                    android:id="@+id/tvCountry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:gravity="end"
+                    android:text="@string/n_a"
+                    android:textColor="@color/color_ebony"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="@{isOwnProfile?View.VISIBLE:View.GONE}"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+                    app:layout_constraintStart_toEndOf="@id/tvCountryStatic"
+                    app:layout_constraintTop_toTopOf="@id/tvCountryStatic" />
+
+                <com.familypedia.utils.MediumTextViewGoldPlay
+                    android:id="@+id/tvCityStatic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="@string/city"
+                    android:textColor="@color/color_dove_grey"
+                    android:textSize="@dimen/sp_15"
+                    android:visibility="@{isOwnProfile?View.VISIBLE:View.GONE}"
+                    app:layout_constraintEnd_toStartOf="@id/tvCity"
+                    app:layout_constraintStart_toEndOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@id/tvCountry" />
+
+                <com.familypedia.utils.MediumTextViewGoldPlay
+                    android:id="@+id/tvCity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:gravity="end"
+                    android:text="@string/n_a"
+                    android:textColor="@color/color_ebony"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="@{isOwnProfile?View.VISIBLE:View.GONE}"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+                    app:layout_constraintStart_toEndOf="@id/tvCityStatic"
+                    app:layout_constraintTop_toTopOf="@id/tvCityStatic" />
+
+                <LinearLayout
+                    android:id="@+id/llReceivedFriendRequest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+                    app:layout_constraintStart_toEndOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@id/rvBiographies">
+
+                    <com.familypedia.utils.MediumTextViewGoldPlay
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/you_have_received_a_friend_request_from_them"
+                        android:textColor="@color/color_dusty_grey"
+                        android:textSize="@dimen/sp_14" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_30"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.familypedia.utils.SemiBoldTextViewGoldPlay
+                            android:id="@+id/btnAccept"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_20"
+                            android:background="@drawable/bg_shape_button_semi_rect"
+                            android:paddingHorizontal="@dimen/dp_25"
+                            android:paddingVertical="@dimen/dp_10"
+                            android:text="@string/accept"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_15" />
+
+                        <com.familypedia.utils.SemiBoldTextViewGoldPlay
+                            android:id="@+id/btnReject"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_20"
+                            android:background="@drawable/bg_shape_button_semi_rect"
+                            android:backgroundTint="@color/color_grey"
+                            android:paddingHorizontal="@dimen/dp_25"
+                            android:paddingVertical="@dimen/dp_10"
+                            android:text="@string/reject"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_15" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/btnSendFriendRequest"
+                    layout="@layout/layout_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+                    app:layout_constraintStart_toEndOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@id/llReceivedFriendRequest" />
+
+                <com.familypedia.utils.SemiBoldTextViewGoldPlay
+                    android:id="@+id/tvBiographies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="@string/biographies"
+                    android:textColor="@color/color_ebony"
+                    android:textSize="@dimen/sp_15"
+                    android:visibility="@{biographiesCount>0?View.VISIBLE:View.GONE}"
+                    app:layout_constraintStart_toEndOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@id/tvCity" />
+
+                <com.familypedia.utils.SemiBoldTextViewGoldPlay
+                    android:id="@+id/tvBiographiesCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{` (`+biographiesCount.toString()+`)`}"
+                    android:textColor="@color/color_ebony"
+                    android:textSize="@dimen/sp_15"
+                    android:visibility="@{biographiesCount>0?View.VISIBLE:View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="@id/tvBiographies"
+                    app:layout_constraintStart_toEndOf="@id/tvBiographies"
+                    app:layout_constraintTop_toTopOf="@id/tvBiographies" />
+
+
+                <com.familypedia.utils.SemiBoldTextViewGoldPlay
+                    android:id="@+id/btnSeeAllBiographies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/see_all"
+                    android:textColor="@color/color_blue"
+                    android:textSize="@dimen/sp_15"
+                    android:visibility="@{biographiesCount>0?View.VISIBLE:View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="@id/tvBiographies"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+                    app:layout_constraintTop_toTopOf="@id/tvBiographies" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBiographies"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="vertical"
+                    android:visibility="@{biographiesCount>0?View.VISIBLE:View.GONE}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+                    app:layout_constraintStart_toEndOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@id/tvBiographies" />
+
+                <include
+                    android:id="@+id/mainProgressBAr"
+                    layout="@layout/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

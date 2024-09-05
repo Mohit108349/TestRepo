@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/dp_10">
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvPostByStatic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/post_by"
+        android:textColor="@color/color_jumbo"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvPostBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_5"
+        android:text="@string/n_a"
+        android:textColor="@color/color_picton_blue"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@id/tvPostByStatic"
+        app:layout_constraintStart_toEndOf="@id/tvPostByStatic"
+        app:layout_constraintTop_toTopOf="@id/tvPostByStatic" />
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/from"
+        android:textColor="@color/color_jumbo"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPostByStatic" />
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvFromDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_5"
+        android:text="@string/n_a"
+        android:textColor="@color/color_ebony"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@id/tvFrom"
+        app:layout_constraintStart_toEndOf="@id/tvFrom"
+        app:layout_constraintTop_toTopOf="@id/tvFrom" />
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to"
+        android:textColor="@color/color_jumbo"
+        android:textSize="@dimen/sp_12"
+        android:layout_marginStart="@dimen/dp_30"
+        app:layout_constraintBottom_toBottomOf="@id/tvFromDate"
+        app:layout_constraintStart_toEndOf="@id/tvFromDate"
+        app:layout_constraintTop_toTopOf="@id/tvFromDate" />
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvToDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_5"
+        android:text="@string/n_a"
+        android:textColor="@color/color_ebony"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@id/tvTo"
+        app:layout_constraintStart_toEndOf="@id/tvTo"
+        app:layout_constraintTop_toTopOf="@id/tvTo" />
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/n_a"
+        android:textColor="@color/color_jumbo"
+        android:textSize="@dimen/sp_13"
+        app:drawableStartCompat="@drawable/ic_location_marker"
+        android:drawablePadding="@dimen/dp_3"
+
+        app:layout_constraintTop_toBottomOf="@id/tvFrom"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/dp_10"
+        />
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lorem_ipsum"
+        android:textColor="@color/color_jumbo"
+        android:textSize="@dimen/sp_14"
+
+        app:layout_constraintTop_toBottomOf="@id/tvLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dp_10"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPhoto"
+        android:layout_width="0dp"
+        app:cardCornerRadius="@dimen/dp_6"
+        android:layout_height="@dimen/dp_140"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPhoto"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="match_parent"
+            app:srcCompat="@mipmap/ic_family_pedia" />
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

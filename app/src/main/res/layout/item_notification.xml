@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemNotification"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/dp_5"
+    android:background="@drawable/shape_rounded_corner"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="@dimen/dp_10">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserImage"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.familypedia.utils.SemiBoldTextViewGoldPlay
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:text="@string/n_a"
+        android:textColor="@color/color_ebony"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintBottom_toTopOf="@id/tvNotificationType"
+        app:layout_constraintEnd_toStartOf="@id/btnAccept"
+        app:layout_constraintStart_toEndOf="@id/ivUserImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginEnd="@dimen/dp_8"/>
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvNotificationType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:text="@string/n_a"
+        android:layout_marginTop="@dimen/dp_3"
+        android:textColor="@color/color_dove_grey"
+        android:textSize="@dimen/sp_11"
+        app:layout_constraintBottom_toTopOf="@id/tvOn"
+        app:layout_constraintStart_toEndOf="@id/ivUserImage"
+        app:layout_constraintEnd_toStartOf="@id/btnAccept"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        android:layout_marginEnd="@dimen/dp_8"/>
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:text="@string/n_a"
+        android:textColor="@color/color_ebony"
+        android:textSize="@dimen/sp_11"
+        android:layout_marginTop="@dimen/dp_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivUserImage"
+        app:layout_constraintTop_toBottomOf="@id/tvNotificationType" />
+
+    <com.familypedia.utils.SemiBoldTextViewGoldPlay
+        android:id="@+id/btnAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_shape_button_semi_rect"
+        android:paddingHorizontal="@dimen/dp_15"
+        android:paddingVertical="@dimen/dp_10"
+        android:text="@string/accept"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnReject"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/tvName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.familypedia.utils.SemiBoldTextViewGoldPlay
+        android:id="@+id/btnReject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="@drawable/bg_shape_button_semi_rect"
+        android:backgroundTint="@color/color_grey"
+        android:paddingHorizontal="@dimen/dp_15"
+        android:paddingVertical="@dimen/dp_10"
+        android:text="@string/reject"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnAccept"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

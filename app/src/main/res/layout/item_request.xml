@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/shape_rounded_corner"
+    android:id="@+id/itemRequest"
+    android:padding="@dimen/dp_10"
+    android:layout_marginVertical="@dimen/dp_5"
+    android:layout_marginHorizontal="@dimen/dp_10"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivCharacterImage"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.familypedia.utils.SemiBoldTextViewGoldPlay
+        android:id="@+id/tvCharacterName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:text="@string/n_a"
+        android:textColor="@color/color_ebony"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintBottom_toBottomOf="@id/ivCharacterImage"
+        app:layout_constraintStart_toEndOf="@id/ivCharacterImage"
+        app:layout_constraintTop_toTopOf="@id/ivCharacterImage"
+        app:layout_constraintEnd_toStartOf="@id/btnAccept"/>
+
+    <com.familypedia.utils.SemiBoldTextViewGoldPlay
+        android:id="@+id/btnAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_shape_button_semi_rect"
+        android:paddingHorizontal="@dimen/dp_12"
+        android:paddingVertical="@dimen/dp_10"
+        android:text="@string/accept"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnReject"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/tvCharacterName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.familypedia.utils.SemiBoldTextViewGoldPlay
+        android:id="@+id/btnReject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_shape_button_semi_rect"
+        android:backgroundTint="@color/color_grey"
+        android:paddingHorizontal="@dimen/dp_12"
+        android:paddingVertical="@dimen/dp_10"
+        android:text="@string/reject"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnAccept"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/dp_10"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

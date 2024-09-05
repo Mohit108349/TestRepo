@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/dp_15"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/dp_10"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/walk_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_40"
+            android:src="@drawable/walkthrough_image1" />
+
+        <com.familypedia.utils.BoldTextViewGoldPlay
+            android:id="@+id/tvheading1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_25"
+            android:fontFamily="@font/goldplay_semi_bold"
+            android:text=""
+            android:textColor="#1728AA"
+            android:textSize="@dimen/sp_24" />
+
+        <com.familypedia.utils.MediumTextViewGoldPlay
+            android:id="@+id/tvheading2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:paddingVertical="@dimen/dp_5"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/goldplay_regular"
+            android:text=""
+            android:textColor="#2040E3"
+            android:textSize="@dimen/sp_16"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llItem2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/dp_10"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.familypedia.utils.BoldTextViewGoldPlay
+            android:id="@+id/tvheading12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_15"
+            android:layout_marginTop="58dp"
+            android:fontFamily="@font/goldplay_semi_bold"
+            android:text="adgashdggdagsdagdhagsdhgadgasdasdasdasddas"
+            android:textColor="#1728AA"
+            android:textSize="@dimen/sp_24" />
+
+        <com.familypedia.utils.MediumTextViewGoldPlay
+            android:id="@+id/tvheading22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/goldplay_regular"
+            android:text="sadagsdgadadadadasdaagdadadadhasdgashdadlashdhasgahdhjhdajdahdghagh"
+            android:textColor="#2040E3"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintHorizontal_bias="0.497" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/walk_img2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_35"
+            android:src="@drawable/walkthrough_image2" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,421 @@
+<resources>
+    <string name="app_name">FamilyPedia</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="login">Login</string>
+    <string name="login_underline"><u>Login</u></string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="forgot_password_">Forgot Password?</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign up</string>
+    <string name="don_t_have_an_account">Don\'t have an account? </string>
+    <string name="already_have_an_account_log_in">Already have an account? Login</string>
+    <string name="name">Name</string>
+    <string name="update">Update</string>
+    <string name="for_your_safty">For your safety to create your first biography you must enter your credentials</string>
+    <string name="enter_name">Enter name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_confirm_password">Enter confirm password</string>
+    <string name="sign_up">Sign up</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="to_reset_your_password_please_enter_the_email_used_to_register_your_account">To reset your password, please enter the email used to register your account.</string>
+    <string name="send_password_reset_link">Send Password Reset Link</string>
+    <string name="password_reset_link_not_received_resend">Password reset link not received? Resend</string>
+    <string name="n_a">N/A</string>
+    <string name="close">Close</string>
+    <string name="dialog_desc_signup">If the address you entered is registered
+to an active account, you will receive
+an email with instructions to reset
+your password.</string>
+    <string name="password_link_sent">Password Link Sent</string>
+    <string name="email_verification">Email Verification</string>
+    <string name="email_already_registered">Email Already Registered</string>
+    <string name="phone_number_already_registered">Phone Number Already Registered</string>
+    <string name="phone_number_not_functional">Mobile registration is not functional</string>
+    <string name="your_email_already_registered">Your email id is already registered.</string>
+    <string name="your_phone_number_already_registered">Your Phone Number is already registered.</string>
+    <string name="your_phone_number_not_working">This is not functional right now .</string>
+    <string name="blocked">Blocked</string>
+    <string name="inActive">InActive</string>
+    <string name="account_deleted">Account Deleted</string>
+    <string name="blocked_desc">You have been blocked by admin.</string>
+    <string name="not_verified">Verification Alert</string>
+
+    <string name="email_verification_desc">Email verification link sent to your email
+id. To proceed, please click the
+verification link in the email.</string>
+
+    <string name="resend">Resend</string>
+    <string name="resend_success">Resend Link Successful.</string>
+    <string name="change_password">Change Password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="reset_password_success">Your password has been reset successfully. Please login with new password</string>
+    <string name="set_your_new_password_below">Set your new password below.</string>
+    <string name="profile">Profile</string>
+    <string name="characters">Biographies</string>
+    <string name="search">Search</string>
+    <string name="search_friends">Search Users</string>
+    <string name="search_character">Search Biography</string>
+    <string name="tap_to_search_character">Tap to search biography</string>
+    <string name="tap_to_search_friends">Tap to search friends</string>
+    <string name="friends">Users</string>
+    <string name="home">Home</string>
+    <string name="yes">Yes</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="no">No</string>
+    <string name="logout">Logout</string>
+    <string name="my_account">My Account</string>
+    <string name="no_data_avaliable_new_description">Create or search your first biography</string>
+    <string name="no_data_avaliable_new_title">no data available</string>
+    <string name="view_profile">View Profile</string>
+    <string name="friend_detail">Friend Detail</string>
+    <string name="user_detail">User Detail</string>
+    <string name="tv_user">User </string>
+    <string name="request_pending">Request Pending</string>
+    <string name="send_friend_request">Send Friend Request</string>
+    <string name="unfriend">Unfriend</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="favourite_characters">Favourite Biographies</string>
+    <string name="post_permissions">Post Permissions</string>
+    <string name="information">Information</string>
+    <string name="about_us">About us</string>
+    <string name="about_character">About Biography</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="tv_delete_account">Delete Your Account</string>
+    <string name="tv_delete_accounts">Delete Account</string>
+
+
+    <string name="not_available">No %1$s  Available</string>
+
+    <string name="photo">Photo</string>
+    <string name="gender">Gender</string>
+    <string name="event_type">Event Type</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="d_o_b">Date of birth</string>
+    <string name="d_o_b_">Date of birth :</string>
+    <string name="d_o_d">Date of death</string>
+    <string name="d_o_d_">Date of death :</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="location">Location</string>
+    <string name="permissions">Permissions</string>
+    <string name="request_post_permissions">Request permission to access</string>
+    <string name="permission_requested">Access permission requested</string>
+    <string name="profile_settings">Profile Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="select">Select</string>
+    <string name="select_dob">Select Date Of Birth</string>
+    <string name="select_from">Select From</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_to">Select To</string>
+    <string name="select_dod">Select Date Of Death</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="enter_country">Enter Country</string>
+    <string name="enter_city">Enter City</string>
+    <string name="enter_location">Enter Location</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
+    <string name="current_password">Current Password</string>
+    <string name="tv_password">Password</string>
+    <string name="tv_confirm_account">Confirm that this is your Account </string>
+    <string name="tv_confirm_account_deleted_success_popup">Your account has been deleted successfully</string>
+    <string name="tv_account_delete_popup">Are you sure you want to delete the Account? This action can not be undone. </string>
+    <string name="tv_confirm_delete_account_description">Before you permanently delete your Account,\n please enter your password. </string>
+    <string name="new_password">New Password</string>
+    <string name="enter_confirm_new_password">Enter Confirm New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="submit">Submit</string>
+    <string name="add_new_character">Add new biography</string>
+    <string name="add_new_character_">Add New Biography</string>
+    <string name="edit_character">Edit Biography</string>
+    <string name="new_character">New biography</string>
+    <string name="character_name">Biography name</string>
+    <string name="character_created">Biography created successfully</string>
+
+    <string name="enter_character_name">Enter Biography Name</string>
+    <string name="continue_">Continue</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="something_went_wrong">Something went wrong. Please try again.</string>
+    <string name="no_data_available">No data available</string>
+    <string name="no_post_available">No New Post Available</string>
+    <string name="remember_to_create">No new bio available </string>
+    <string name="no_biographies">You have no favourite biographies.</string>
+    <string name="no_biographie"> No Biographies Available</string>
+    <string name="let_s_quickly_search_if_the_character_you_want">Let\'s quickly search if the biography you want to create already exists.</string>
+    <string name="error_name">Please enter name</string>
+    <string name="error_email_empty">Please enter email</string>
+    <string name="error_email_invalid">Please enter valid email</string>
+    <string name="error_password_empty">Please enter password</string>
+    <string name="error_new_password_empty">Please enter new password</string>
+    <string name="error_password_invalid">Password must contain at least 8 characters</string>
+
+    <string name="error_confirm_password_empty">Please enter confirm password</string>
+    <string name="error_confirm_password_unmatch">Confirm password must be same as password</string>
+    <string name="error_tnc">You must accept Terms and Conditions</string>
+    <string name="error_character_status">Please select biography status</string>
+    <string name="error_gender">Please select gender</string>
+    <string name="error_starting_date">Please select starting date</string>
+    <string name="error_ending_date">Please select ending date</string>
+    <string name="error_location">Please enter event location</string>
+    <string name="error_phone">Please select valid phone number</string>
+    <string name="error_dob">Please select date of birth</string>
+    <string name="error_dod">Please select date of death</string>
+    <string name="error_city_of_birth">Please enter city of birth</string>
+    <string name="error_country_of_birth">Please enter country of birth</string>
+    <string name="error_event">Please select event type</string>
+    <string name="error_description">Please select event description</string>
+
+    <string name="lbl_take_camera_picture">Take a picture</string>
+    <string name="lbl_choose_from_gallery">Choose from gallery</string>
+    <string name="toast_image_intent_null">Image picker option is missing!</string>
+    <string name="dialog_permission_title">Grant Permissions</string>
+    <string name="dialog_permission_message">This app needs permission to use this feature. You can grant them in app settings.</string>
+    <string name="lbl_set_profile_photo">Set profile image</string>
+    <string name="select_status">Select Status</string>
+    <string name="status">Status</string>
+    <string name="is_alive">Is alive</string>
+    <string name="is_alive_">Is alive :</string>
+    <string name="city_of_birth">City of birth</string>
+    <string name="city_of_birth_">City of birth :</string>
+    <string name="country_of_birth">Country of birth</string>
+    <string name="country_of_birth_">Country of birth :</string>
+    <string name="name_">Name :</string>
+    <string name="add_new_post">Add New Post</string>
+    <string name="edit_post">Edit Post</string>
+    <string name="status_">Status :</string>
+    <string name="photos">Photos</string>
+
+    <string name="password_changed">Password changed</string>
+    <string name="password_changed_successfully">Password successfully changed</string>
+    <string name="highlight">Highlight</string>
+    <string name="quick_filter">Search through your bios</string>
+    <string name="quick_filters">Search through your Users</string>
+    <string name="post_by">Post by</string>
+    <string name="from">From :</string>
+    <string name="to">To :</string>
+    <string name="from_">From</string>
+    <string name="to_">To</string>
+    <string name="date">Date</string>
+    <string name="date_">Date :</string>
+
+    <string name="i_accept_terms_amp_conditions_and_privacy_policy"><![CDATA[I accept Terms & Conditions and Privacy Policy.]]></string>
+    <string name="post_gallery">Post Gallery</string>
+    <string name="attach_post_photo">Attach Post Photo</string>
+    <string name="select_a_character">Select a Biography</string>
+    <string name="remove_permission">Remove Permission</string>
+    <string name="remove_permission_confirm">Are you sure you want to confirm
+remove permission?</string>
+    <string name="you_have_received_a_friend_request_from_them">You have received a friend request from them.</string>
+    <string name="recent_searches">Recent Searches</string>
+    <string name="all_biographies">All Biographies</string>
+    <string name="biographies_list">Biographies List</string>
+    <string name="invite_your_friends">Invite your friends</string>
+    <string name="invite_your_friends_">Invite Your Friends</string>
+    <string name="invite_friends_">Invite Friends</string>
+    <string name="invite_your_friends_via">Invite your friends via</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="message">Message</string>
+    <string name="more">More</string>
+    <string name="copy_link">Copy link</string>
+    <string name="your_invited_friends">Your Invited Friends</string>
+    <string name="default_notification_channel_id">1</string>
+    <string name="post_something_about_biography">Post something about biography</string>
+    <string name="click_here_to_resend"><u>click here to resend</u></string>
+    <string name="password_reset_not_received">Password reset link not received?</string>
+    <string name="email_verification_link_not_received">Email verification link not received?</string>
+    <string name="resend_in_60_sec">Resend in 60 Sec</string>
+    <string name="resend_in_sec">Resend in %1$s Sec</string>
+    <string name="please_reset_password_to_login">Please reset password to login.</string>
+    <string name="click_here_to_reset_password"><u>Click here to reset password</u></string>
+    <string name="friend_request">Friend Request</string>
+    <string name="tv_permitted_biographies">Permitted Biographies </string>
+    <string name="friend_request_rejected">Friend Request Rejected</string>
+    <string name="friend_request_accepted">Friend Request Accepted</string>
+    <string name="friend">Friend</string>
+    <string name="pending">Pending</string>
+
+    <string name="biography_request">Biography Request</string>
+    <string name="biography_request_rejected">Biography Request Rejected</string>
+    <string name="biography_request_accepted">Biography Request Accepted</string>
+    <string name="biography_permission_removed">Biography Permission Removed</string>
+    <string name="new_post_created">Post Created</string>
+    <string name="create_new_biography">New Biography Created</string>
+    <string name="delete_biography">Biography Deleted</string>
+    <string name="on">On:</string>
+    <string name="tv_Available">Available</string>
+    <string name="post_something_about_character">Post something about him / her </string>
+    <string name="support_email">soporte@yourfamilypedia.com</string>
+    <string name="not_received_email">In case you are not receiving the emails, kindly email us at</string>
+    <string name="view_your_invited_friends">View Your Invited Friends</string>
+    <string name="whatsapp_not_installed">Whatsapp have not been installed. Please use other options.</string>
+    <string name="sms_not_support">Your Device does not support to share data via SMS. Please use other options.</string>
+    <string name="wait_for_link">We are generating Invitation link. Please wait.</string>
+    <string name="link_copied">Link Copied</string>
+    <string name="become_friend">Become Friend</string>
+    <string name="your_friends">Your Friends</string>
+    <string name="delete">Delete</string>
+    <string name="delete_bio">Delete Bio</string>
+    <string name="delete_post_confirmation">Are you sure? You want to delete this post?</string>
+    <string name="delete_bio_confirmation">Are you sure? You want to delete this bio?</string>
+    <string name="confirmation_logout">Are you sure? You want to logout?</string>
+    <string name="confirmation_delete_bio">Are you sure? You want to delete bio?</string>
+    <string name="post_removed">Post Removed</string>
+    <string name="post_edited">Post Edited</string>
+    <string name="failed_to_generate_link">Failed to generate link,Please try again.</string>
+
+
+    <string name="done">Done</string>
+    <string name="multiple">Multiple</string>
+    <string name="select_5_images">You can select maximum %1$d images.</string>
+    <string name="image_restrict">You can\'t post more the 5 Images.</string>
+    <string name="start_end_date_cannot_be_same">Starting and Ending date can not be same for multiple day event.</string>
+    <string name="end_date_before_start_date_error">Ending date can not be before starting date.</string>
+    <string name="your_biographies">Your Biographies</string>
+    <string name="biographies_with_permission">Biographies with Permission</string>
+    <string name="post_request">Post Request</string>
+    <string name="given_request">Given Request</string>
+    <string name="multiple_day_event">Multiple Day Event</string>
+    <string name="single_day_event">Single Day Event</string>
+    <string name="about">About</string>
+    <string name="timeline">Timeline</string>
+    <string name="tap_to_retry">Tap to Retry</string>
+    <string name="tv_retry"> Retry</string>
+    <string name="tv_create_your_first_bio"> Create your first bio</string>
+    <string name="tv_oops"> Oops!</string>
+    <string name="alive">Alive</string>
+    <string name="dead">Dead</string>
+    <string name="click_to_create_biography">Click to Create a new biography</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="please_allow_permissions">Please allow permissions</string>
+    <string name="post_detail">Post Detail</string>
+    <string name="db_and_dd_cant_be_same">Date of birth cannot be same as Date of death.</string>
+    <string name="db_cant_be_after_dod">Date of birth cannot be after Date of death.</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="others">Others</string>
+    <string name="notification_detail">Notification Detail</string>
+    <string name="need_permission">You must have post permission to access the feature</string>
+
+    <string name="invitation_text">Share your family memories with your loved ones in one click. Download Famiilypedia: </string>
+    <string name="invitation_text_for_whatsapp">Hi, I\'ve create the bio of %1$s and invite you to complete it   </string>
+    <string name="server_timeout">Server timeout. Please try again.</string>
+    <string name="couldnt_connect">Couldn\'t connect to the server. Please try again.</string>
+
+    <!-- IMAGE PICKER-->
+
+
+    <string name="ef_content_desc_image" translatable="false">Image</string>
+
+    <string name="ef_permission_write_external_rationale">Allow access external storage to select images</string>
+
+    <string name="ef_ok">OK</string>
+
+    <string name="ef_done">DONE</string>
+
+    <string name="ef_camera">CAMERA</string>
+
+    <string name="ef_title_folder">Folder</string>
+
+    <string name="ef_title_select_image">Tap to select images</string>
+
+    <string name="ef_ltitle_permission_denied">Permission denied</string>
+
+    <string name="ef_selected">%d selected</string>
+
+    <string name="ef_selected_with_limit">%1$d/%2$d selected</string>
+
+    <string name="ef_error_create_image_file">Failed to create image file</string>
+
+    <string name="ef_error_no_camera">No camera found</string>
+
+    <string name="ef_error_null_cursor">Oops, something went wrong!</string>
+
+    <string name="ef_msg_empty_images">No images found</string>
+
+    <string name="ef_msg_no_write_external_permission">Please grant storage permission to select images</string>
+
+    <string name="ef_msg_limit_images">Image selection limit</string>
+
+    <!--Don't Translate-->
+
+
+    <string name="ef_gif" translatable="false">GIF</string>
+
+    <string name="ef_content_desc_folder" translatable="false">Folder</string>
+
+    <string name="choose_photos">Choose Photos</string>
+
+    <string name="tap_to_select">Tap to select</string>
+
+    <string name="no_invited_friends_available">No Invited Friends Available</string>
+    <string name="no_friend_requests_available">No Friend Requests Available</string>
+    <string name="edit">Edit</string>
+    <string name="report">Report</string>
+    <string name="block">Block</string>
+    <string name="unblock">Unblock</string>
+    <string name="post_reported">Post Reported</string>
+    <string name="confirm_block">Are you sure that you want to block</string>
+    <string name="confirm_unblock">Are you sure that you want to unblock</string>
+    <string name="confirm_report_user">Are you sure that you want to report</string>
+    <string name="user_reported">User Reported</string>
+    <string name="user_blocked">User Blocked</string>
+    <string name="confirm_unfriend">Are you sure you want to remove %1$s as your friend?</string>
+    <string name="confirm_report_post">Are you sure that you want to report this post ?</string>
+    <string name="welcome_to_familyPedia">Welcome to FamilyPedia</string>
+    <string name="logging_out_please_wait">Logging out Please wait</string>
+    <string name="see_all">See all</string>
+    <string name="biographies">Biographies</string>
+    <string name="faq">FAQ</string>
+    <string name="no_friends_avaialable">No Friends Available</string>
+    <string name="no_post_request_available">No post request available</string>
+    <string name="no_given_request_available">No given request available</string>
+    <string name="no_notifications_available">No notifications available</string>
+    <string name="read_more">read more</string>
+    <string name="read_less">read less</string>
+    <string name="crop">Crop</string>
+    <string name="selected_photos">Selected Photos</string>
+    <string name="crop_photo">Crop Photo</string>
+    <string name="owner">Owner: </string>
+    <string name="skip">Skip</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="signupWithEmailFragment">Signup with email</string>
+    <string name="signup_with_phone">Signup with phone number</string>
+    <string name="enter_four_digit_code_to_verify_your_phone_number_sent_to_">Enter four digit code to verify your phone number sent to <b><font fgcolor='#000000'> [X]</font></b></string>
+    <string name="enter_four_digit_code_to_verify_your_email_sent_to_">Enter four digit code to verify your email sent to <b><font fgcolor='#000000'> [X]</font></b></string>
+    <string name="resend_code_in"><u>Resend Code in</u></string>
+    <string name="resend_code"><u>Resend Code</u></string>
+    <string name="phone_number_verified">Phone number verified!</string>
+    <string name="you_have_successfully_verified_your_phone_number">You have successfully verified your phone number</string>
+    <string name="change_signup_with">Change signup with </string>
+    <string name="email_address">Email Address</string>
+    <string name="phone_number_verification">Phone Number verification</string>
+    <string name="please_enter_your_phone_number">Please enter your phone number</string>
+    <string name="error_invalid_phone_number">Invalid phone number</string>
+    <string name="start">Start</string>
+    <string name="ask_your_friends_to_complete_the_bios_you_want">Ask your friends to complete the bios you want</string>
+    <string name="their_memories_add_to_yours">Their memories add to yours</string>
+    <string name="easily_create_biographies_of_whoever_you_want">Easily create biographies of whoever you want</string>
+    <string name="photos_and_memories_are_ordered_chronologically">Photos and memories are ordered chronologically</string>
+    <string name="order_important_photos_of_your_life_and_that_of_your_relatives"> Order important photos of your life and that of your relatives</string>
+    <string name="avoid_losing_your_most_beautiful_memories">Avoid losing your most beautiful memories</string>
+    <string name="verify_email">Verify Email</string>
+    <string name="verify_phonenumber">Verify Phone Number</string>
+    <string name="email_is_not_verified">Email is not verified</string>
+    <string name="email_cant_be_empty">Email can\'t be empty</string>
+    <string name="phone_number_is_not_verified">Phone number is not verified</string>
+    <string name="phone_number_cant_be_empty">Phone number can\'t be empty</string>
+    <string name="choose_the_bio_you_want_to_write_on">Choose the bio you want to write on.</string>
+    <string name="if_you_don_t_have_any_create_it_first">If you don\'t have any, create it first.</string>
+    <string name="phone_number_has_been_verified">Phone number has been verified</string>
+    <string name="share">Share the bio by WhatsApp</string>
+</resources>

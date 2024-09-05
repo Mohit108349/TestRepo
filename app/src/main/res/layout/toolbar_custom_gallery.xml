@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_blue"
+        android:contentInsetEnd="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetStart="0dp"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/dp_8"
+            android:paddingStart="@dimen/dp_8">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_leftGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_back"
+                android:contentDescription="@null"
+                android:padding="@dimen/dp_4"
+                 />
+
+            <com.familypedia.utils.MediumTextViewGoldPlay
+                android:id="@+id/tvHeaderGallery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18"
+                tools:ignore="RtlSymmetry" />
+
+
+            <com.familypedia.utils.BoldTextViewGoldPlay
+                android:id="@+id/tvDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:padding="@dimen/dp_10"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:text="@string/done" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+</layout>

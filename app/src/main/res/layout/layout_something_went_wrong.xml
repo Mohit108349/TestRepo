@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clSomthingWentWrong"
+    android:visibility="gone"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:id="@+id/llClickOnMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:background="@drawable/draw_stroke"
+        android:orientation="vertical"
+        android:translationZ="@dimen/sp_5">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSomethingWentWrong"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_120"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@drawable/no_internet_connect_new"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.familypedia.utils.SemiBoldTextViewGoldPlay
+            android:id="@+id/tvOops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="@string/tv_oops"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivSomethingWentWrong" />
+
+        <com.familypedia.utils.MediumTextViewGoldPlay
+            android:id="@+id/tvSomethingWentWrong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:text="@string/something_went_wrong"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginBottom="@dimen/dp_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOops" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRefresh"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_16"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_5"
+            android:src="@drawable/ic_refresh"
+            android:visibility="gone"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <com.familypedia.utils.SemiBoldTextViewGoldPlay
+            android:id="@+id/tvTapToRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@drawable/draw_retry_bg"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_12"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:text="@string/tv_retry"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/color_picton_blue"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSomethingWentWrong"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

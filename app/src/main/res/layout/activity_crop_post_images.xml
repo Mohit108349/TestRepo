@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbarAddNewPost"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCrop"
+        android:elevation="@dimen/dp_10"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        app:srcCompat="@mipmap/crop"
+        android:layout_margin="@dimen/dp_13"
+
+        android:background="@drawable/red_circle"
+        android:backgroundTint="#B8FFFFFF"
+        android:layout_below="@id/toolbarAddNewPost"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/dp_12"
+        />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarAddNewPost"/>
+
+</RelativeLayout>

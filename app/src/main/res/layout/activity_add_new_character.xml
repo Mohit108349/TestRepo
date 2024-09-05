@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/clParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.dashboard.character.addCharacter.AddNewCharacterActivity">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dp_15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dp_15" />
+
+        <include
+            android:id="@+id/toolbarAddCharacter"
+            layout="@layout/layout_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart" />
+
+        <com.familypedia.utils.SemiBoldTextViewGoldPlay
+            android:id="@+id/tvNameStatic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:text="@string/name_"
+            android:layout_marginStart="@dimen/dp_10"
+            android:textColor="@color/color_jumbo"
+
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/toolbarAddCharacter" />
+
+        <com.familypedia.utils.SemiBoldTextViewGoldPlay
+            android:id="@+id/tvCharacterName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="@string/n_a"
+            android:gravity="start"
+            android:textColor="@color/color_ebony"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/tvNameStatic"
+            app:layout_constraintTop_toTopOf="@id/tvNameStatic" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginTop="@dimen/dp_20"
+
+            android:src="@mipmap/ic_profile_pic"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvCharacterName" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_camera"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfileImage"
+            app:layout_constraintEnd_toEndOf="@id/ivProfileImage" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilName"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:hint="@string/name"
+            android:textColorHint="@color/color_text_input_layout_hint"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/ivProfileImage"
+            app:placeholderText="@string/enter_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/dp_15"
+                android:singleLine="true"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/sp_13" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilStatus"
+            style="@style/TextInputLayoutSpinnerStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:hint="@string/is_alive"
+            android:textColorHint="@color/color_text_input_layout_hint"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tilName"
+            app:placeholderText="@string/select_status">
+
+            <AutoCompleteTextView
+                android:id="@+id/spinnerStatus"
+                style="@style/AutoCompleteTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDOB"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:hint="@string/d_o_b"
+            android:textColorHint="@color/color_text_input_layout_hint"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tilStatus"
+            app:placeholderText="@string/select_dob">
+            <!-- app:placeholderText="@string/enter_email"-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:editable="false"
+                android:focusable="false"
+                android:imeOptions="actionNext"
+                android:inputType="textWebEmailAddress"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/dp_15"
+                android:singleLine="true"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/sp_13" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDOD"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:hint="@string/d_o_d"
+            android:textColorHint="@color/color_text_input_layout_hint"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tilDOB"
+            app:placeholderText="@string/select_dod">
+            <!-- app:placeholderText="@string/enter_email"-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDOD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:editable="false"
+                android:focusable="false"
+                android:imeOptions="actionNext"
+                android:inputType="textWebEmailAddress"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/dp_15"
+                android:singleLine="true"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/sp_13" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCityOfBirth"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:hint="@string/city_of_birth"
+            android:textColorHint="@color/color_text_input_layout_hint"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tilDOD"
+            app:placeholderText="@string/enter_city">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/dp_15"
+                android:singleLine="true"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/sp_13" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCountryOfBirth"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:hint="@string/country_of_birth"
+            android:textColorHint="@color/color_text_input_layout_hint"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tilCityOfBirth"
+            app:placeholderText="@string/enter_country">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textCapWords"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/dp_15"
+                android:singleLine="true"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/sp_13" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <include
+            layout="@layout/layout_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_20"
+            app:layout_constraintTop_toBottomOf="@id/tilCountryOfBirth"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            android:id="@+id/btnLay"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

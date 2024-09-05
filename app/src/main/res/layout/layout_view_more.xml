@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/itemSeemore"
+    android:layout_margin="@dimen/dp_5">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/gola"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_70"
+        app:cardBackgroundColor="@color/color_grey"
+        app:cardCornerRadius="@dimen/dp_50"
+        >
+        <com.familypedia.utils.MediumTextViewGoldPlay
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View \nmore"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

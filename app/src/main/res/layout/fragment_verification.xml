@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.auth.phone_login.VerificationFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp_15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp_15" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        android:src="@mipmap/ic_family_pedia"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.familypedia.utils.SemiBoldTextViewGoldPlay
+        android:id="@+id/tvVerificationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:text="@string/phone_number_verification"
+        android:textColor="@color/color_ebony"
+        android:textSize="@dimen/sp_22"
+        android:gravity="center"
+        app:hintTextColor="@color/colorTextHint"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+
+        />
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvVerifyDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginHorizontal="@dimen/dp_15"
+        android:textAlignment="center"
+        android:text="@string/enter_four_digit_code_to_verify_your_phone_number_sent_to_"
+        android:textColor="@color/color_dove_grey"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/tvVerificationTitle" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/otp_view"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:cursorVisible="true"
+        android:inputType="number"
+        android:fontFamily="@font/goldplay_medium"
+        android:itemBackground="@drawable/box_draw_bg"
+        android:textColor="@color/color_grey"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:cursorColor="@color/color_blue"
+        app:cursorWidth="@dimen/dp_1"
+        app:itemCount="4"
+        app:itemHeight="50dp"
+        app:itemRadius="@dimen/dp_8"
+        app:itemSpacing="@dimen/dp_15"
+        app:itemWidth="50dp"
+        app:viewType="none"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/tvVerifyDesc"/>
+
+    <include
+        android:id="@+id/Continue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_button"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/otp_view"
+        />
+
+        <LinearLayout
+            android:id="@+id/llResend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Continue">
+
+
+        <com.familypedia.utils.RegularTextViewGoldPlay
+            android:id="@+id/tvResendHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/black"
+            android:text="@string/resend_code_in"
+
+            />
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/ResendOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginStart="@dimen/dp_5"
+        android:textColor="@color/color_blue"
+        android:text="@string/resend_code"
+        app:layout_constraintLeft_toRightOf="@+id/tvResendHead"
+        app:layout_constraintTop_toBottomOf="@+id/Continue"
+
+
+        />
+        </LinearLayout>
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginBottom="@dimen/dp_30"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llResend"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

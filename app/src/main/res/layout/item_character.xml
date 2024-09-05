@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemCharacter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_15"
+    android:layout_marginVertical="@dimen/dp_10"
+    android:background="@drawable/shape_rounded_corner"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="@dimen/dp_15">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivCharacterImage"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.familypedia.utils.SemiBoldTextViewGoldPlay
+        android:id="@+id/tvCharacterName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:text="@string/n_a"
+        android:textColor="@color/color_ebony"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintBottom_toTopOf="@id/tvOwner"
+        app:layout_constraintEnd_toStartOf="@id/ivEditCharacter"
+        app:layout_constraintStart_toEndOf="@id/ivCharacterImage"
+        app:layout_constraintTop_toTopOf="@id/ivCharacterImage"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvOwner"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:text="@string/owner"
+        android:layout_marginTop="@dimen/dp_7"
+        android:textColor="@color/color_dove_grey"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@id/ivCharacterImage"
+        app:layout_constraintStart_toEndOf="@id/ivCharacterImage"
+        app:layout_constraintTop_toBottomOf="@id/tvCharacterName" />
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvOwnerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_2"
+        android:text="@string/n_a"
+        android:textColor="@color/color_ebony"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toEndOf="@id/tvOwner"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/tvOwner" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivEditCharacter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_edit" />
+</androidx.constraintlayout.widget.ConstraintLayout>

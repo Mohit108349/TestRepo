@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dp_15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dp_15" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_40"
+            android:src="@mipmap/ic_family_pedia"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.familypedia.utils.SemiBoldTextViewGoldPlay
+            android:id="@+id/tvsignupwithEmailmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:text="@string/signupWithEmailFragment"
+            android:textColor="@color/color_ebony"
+            android:textSize="@dimen/sp_22"
+            app:hintTextColor="@color/colorTextHint"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/ivLogo"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/llChangeOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvsignupwithEmailmail">
+
+            <com.familypedia.utils.MediumTextViewGoldPlay
+                android:id="@+id/tvChangeToPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/change_signup_with"
+                android:textAlignment="center"
+                android:textColor="@color/color_jumbo"
+                android:textSize="@dimen/sp_15" />
+
+            <com.familypedia.utils.MediumTextViewGoldPlay
+                android:id="@+id/OptionPhn"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/phone_number"
+                android:textAlignment="center"
+                android:textColor="@color/color_picton_blue"
+                android:textSize="@dimen/sp_15"
+
+
+                />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@color/color_light_grey"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llChangeOption" />
+
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_15"
+            android:text="@string/for_your_safty"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/line" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilName"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:hint="@string/name"
+            android:textColorHint="@color/color_text_input_layout_hint"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvMsg"
+            app:placeholderText="@string/enter_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:digits="qwertyuiopasdfghjklzxcvbnm ASDFGHJKLQWERTYUIOPZXCVBNM"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:paddingHorizontal="@dimen/dp_15"
+                android:paddingVertical="@dimen/dp_16"
+                android:singleLine="true"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/sp_13" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:hint="@string/email"
+            android:textColorHint="@color/color_text_input_layout_hint"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tilName"
+            app:placeholderText="@string/enter_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/dp_15"
+                android:paddingVertical="@dimen/dp_16"
+                android:singleLine="true"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/sp_13" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tilEmail">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:textColorHint="@color/color_text_input_layout_hint"
+                app:placeholderText="@string/enter_password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/dp_15"
+                    android:paddingVertical="@dimen/dp_16"
+                    android:singleLine="true"
+                    android:textColor="@color/black_light"
+                    android:textSize="@dimen/sp_13" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/ivShowHideNormalEmail"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_23"
+                android:layout_marginRight="@dimen/dp_15"
+                android:src="@drawable/password_visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlConfirmPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/rlPassword">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilConfirmPassword"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirm_password"
+                android:textColorHint="@color/color_text_input_layout_hint"
+                app:placeholderText="@string/enter_password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/dp_15"
+                    android:paddingVertical="@dimen/dp_16"
+                    android:singleLine="true"
+                    android:textColor="@color/black_light"
+                    android:textSize="@dimen/sp_13" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/ivShowHidesConformEmail"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_23"
+                android:layout_marginRight="@dimen/dp_15"
+                android:src="@drawable/password_visible" />
+        </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/cbTerms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-8dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/i_accept_terms_amp_conditions_and_privacy_policy"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/rlConfirmPassword"
+
+            />
+
+        <include
+            android:id="@+id/layoutSignup"
+            layout="@layout/layout_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/cbTerms" />
+
+        <com.familypedia.utils.MediumTextViewGoldPlay
+            android:id="@+id/tvAlreadyHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:gravity="bottom"
+            android:text="@string/already_have_an_account_log_in"
+            android:textColor="@color/color_black_mine_shaft"
+            android:textSize="@dimen/sp_15"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/layoutSignup"
+            app:layout_constraintVertical_bias="0.968" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_light">#9DFFFFFF</color>
+
+
+    <color name="boxStrokeColor">#D5D5D5</color>
+    <color name="colorTextHint">#B1B1B1</color>
+    <color name="black_light">#2e3748</color>
+
+    <color name="color_blue">#4AA2F8</color>
+    <color name="color_blue_light">#4EACF9</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black_mine_shaft">#3A3A3A</color>
+    <color name="color_ebony">#0B101C</color>
+    <color name="color_dove_grey">#6D6D6D</color>
+    <color name="color_jumbo">#808288</color>
+    <color name="color_grey">#8D8D8D</color>
+    <color name="color_divider">#DEDEDE</color>
+    <color name="color_light_grey">#F3F3F3</color>
+    <color name="color_dusty_grey">#9A9A9A</color>
+    <color name="color_text_input_layout_hint">#858585</color>
+    <color name="shimmer_placeholder">#dddddd</color>
+    <color name="color_error">#D8000C</color>
+
+    <color name="color_bg_search">#EFEFEF</color>
+    <color name="color_picton_blue">#4FADF9</color>
+    <color name="colorYellow">#FFFF00</color>
+    <color name="colorBtnFriends">#B2B9BE</color>
+    <color name="colorBtnRetry">#DFF1FF</color>
+
+    <!--IMAGEPICER-->
+
+
+    <color name="ef_white">#FFFFFF</color>
+    <color name="ef_grey">#9E9E9E</color>
+    <color name="ef_black_alpha_50">#80000000</color>
+    <color name="ef_black_alpha_aa">#AA000000</color>
+    <color name="ef_teal">#009688</color>
+    <color name="color_blue_dark">#1728AA</color>
+</resources>

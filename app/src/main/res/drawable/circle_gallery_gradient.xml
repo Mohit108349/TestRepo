@@ -1,0 +1,15 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:innerRadius="0dp"
+    android:shape="ring"
+    android:thicknessRatio="2"
+    android:useLevel="false" >
+
+    <gradient
+        android:type="linear"
+        android:startColor="#2887AF"
+        android:endColor="#3E6588"
+        />
+    <corners android:radius="@dimen/dp_10"/>
+
+    <size android:height="@dimen/sp_25" android:width="@dimen/sp_25"/>
+</shape>

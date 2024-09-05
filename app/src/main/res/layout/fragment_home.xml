@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+-->
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dp_15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dp_15" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/bg_shape_search_edittext"
+            android:drawableEnd="@drawable/ic_search"
+            android:fontFamily="@font/goldplay_medium"
+            android:hint="@string/search"
+            android:imeOptions="actionSearch"
+            android:lines="1"
+            android:paddingHorizontal="@dimen/dp_15"
+            android:paddingVertical="@dimen/dp_15"
+            android:singleLine="true"
+
+            android:textColor="@color/color_ebony"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/ivNotification"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:lines="1"
+            android:scaleType="fitStart"
+            app:layout_constraintEnd_toStartOf="@id/ivNotification"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/header_logo" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            app:layout_constraintBottom_toBottomOf="@id/ivHeader"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/ivHeader"
+            app:layout_constraintTop_toTopOf="@id/ivHeader"
+            app:srcCompat="@drawable/ic_notification" />
+
+        <com.familypedia.utils.MediumTextViewGoldPlay
+            android:id="@+id/tvMsgCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@drawable/map_circle_pin"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/ivNotification"
+            app:layout_constraintTop_toTopOf="@id/ivNotification" />
+
+        <com.familypedia.utils.SemiBoldTextViewGoldPlay
+            android:id="@+id/tvFavouriteCharacter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/favourite_characters"
+            android:textColor="@color/color_ebony"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/ivHeader" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCharactersList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvFavouriteCharacter" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/color_divider"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvCharactersList" />
+
+
+<!--
+        <com.familypedia.utils.nestedViewPager.NestedScrollableHost
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/progressPaging"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider">
+-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPosts"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dp_5"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/progressPaging"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+<!--        </com.familypedia.utils.nestedViewPager.NestedScrollableHost>-->
+
+        <ProgressBar
+            android:id="@+id/progressPaging"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvPosts" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnAddPost"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_30"
+            android:elevation="@dimen/dp_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_add_float_btn" />
+
+        <include
+            layout="@layout/layout_post_list_shimmer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            android:id="@+id/shimmerLay"
+            />
+
+        <include
+            layout="@layout/layout_something_went_wrong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            android:id="@+id/someThingWrong"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout><!--
+</androidx.core.widget.NestedScrollView>-->

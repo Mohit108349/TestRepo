@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_rounded_corner"
+    android:padding="@dimen/dp_15"
+    android:id="@+id/itemCharacter"
+    android:layout_marginVertical="@dimen/dp_10"
+    android:layout_marginHorizontal="@dimen/dp_15">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ivCharacterImage"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        app:cardCornerRadius="@dimen/dp_50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardBackgroundColor="@color/shimmer_placeholder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <com.familypedia.utils.SemiBoldTextViewGoldPlay
+        android:id="@+id/tvCharacterName"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_13"
+        android:textColor="@color/color_ebony"
+        android:background="@color/shimmer_placeholder"
+        app:layout_constraintTop_toTopOf="@id/ivCharacterImage"
+        app:layout_constraintBottom_toBottomOf="@id/ivCharacterImage"
+        app:layout_constraintStart_toEndOf="@id/ivCharacterImage"
+        android:layout_marginStart="@dimen/dp_10"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

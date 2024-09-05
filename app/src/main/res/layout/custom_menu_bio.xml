@@ -1,0 +1,55 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+<!--<LinearLayout-->
+<!--    android:id="@+id/llDeleteBio"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:orientation="horizontal">-->
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/dp_6"-->
+<!--        android:layout_marginStart="@dimen/dp_8"-->
+<!--        android:src="@mipmap/delete_bio"/>-->
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_margin="8dp"
+        android:drawableStart="@mipmap/delete_bio"
+        android:text="@string/delete_bio"
+        android:drawablePadding="@dimen/dp_6"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/sp_17"/>
+<!--</LinearLayout>-->
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/black"
+        android:drawablePadding="@dimen/dp_5"
+        android:drawableStart="@drawable/ic_whatsapp"
+        android:layout_margin="10dp"
+        android:text="@string/share"
+        android:layout_gravity="start|center"
+        android:textSize="@dimen/sp_17"/>
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/tvCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:text="@string/cancel"
+        android:layout_gravity="start|center"
+        android:textSize="@dimen/sp_17"/>
+</LinearLayout>

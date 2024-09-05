@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_custom_gallery" />
+
+        <com.familypedia.utils.MediumTextViewGoldPlay
+            android:id="@+id/tvSelectedCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:paddingTop="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:textColor="@color/white"
+             />
+
+        <LinearLayout
+            android:id="@+id/llParentGallery"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGallery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutAnimation="@anim/layout_animation_from_bottom"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

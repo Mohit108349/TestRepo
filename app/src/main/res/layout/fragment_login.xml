@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+   >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dp_15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dp_15" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_130"
+            android:layout_marginTop="@dimen/dp_25"
+            android:src="@mipmap/ic_family_pedia"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:hint="@string/email"
+            android:textColorHint="@color/color_text_input_layout_hint"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/ivLogo"
+            app:placeholderText="@string/enter_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/dp_15"
+                android:paddingVertical="@dimen/dp_16"
+                android:singleLine="true"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/sp_20"
+                app:placeholderTextColor="@color/colorTextHint" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tilEmail">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:textColorHint="@color/color_text_input_layout_hint"
+                app:placeholderText="@string/enter_password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/dp_15"
+                    android:paddingVertical="@dimen/dp_16"
+                    android:singleLine="true"
+                    android:textColor="@color/black_light"
+                    android:textSize="@dimen/sp_20" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/ivShowHide"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_23"
+                android:layout_marginRight="@dimen/dp_15"
+                android:src="@drawable/password_visible" />
+        </RelativeLayout>
+
+        <com.familypedia.utils.MediumTextViewGoldPlay
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:gravity="right"
+            android:text="@string/forgot_password"
+            android:textColor="@color/color_blue_light"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/rlPassword"
+
+            />
+
+
+        <include
+            android:id="@+id/layoutLogin"
+            layout="@layout/layout_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvForgotPassword" />
+
+        <!--  <com.familypedia.utils.SemiBoldTextViewGoldPlay
+              android:id="@+id/btnLogin"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:textSize="@dimen/sp_16"
+              android:text="@string/login"
+              android:gravity="center"
+              android:textColor="@color/color_white"
+              android:layout_marginTop="@dimen/dp_30"
+              android:layout_marginHorizontal="@dimen/dp_10"
+              android:padding="@dimen/dp_15"
+              android:background="@drawable/bg_shape_button"
+              app:layout_constraintTop_toBottomOf="@id/tilPassword"
+              app:layout_constraintStart_toEndOf="@id/guidelineStart"
+              app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+              />
+          -->
+
+
+        <!--    <com.familypedia.utils.MediumTextViewGoldPlay-->
+        <!--        android:id="@+id/tvDontHaveAccount"-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginBottom="@dimen/dp_30"-->
+        <!--        android:text="@string/don_t_have_an_account"-->
+        <!--        android:textColor="@color/color_black_mine_shaft"-->
+        <!--        android:textSize="@dimen/sp_15"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toEndOf="@id/guidelineStart" />-->
+
+        <LinearLayout
+            android:id="@+id/llDoNotHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/layoutLogin">
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="@color/color_dusty_grey" />
+
+            <com.familypedia.utils.MediumTextViewGoldPlay
+                android:id="@+id/tvDontHaveAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/don_t_have_an_account"
+                android:textColor="@color/color_black_mine_shaft"
+                android:textSize="@dimen/sp_15" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_8"
+                android:background="@color/color_dusty_grey" />
+
+        </LinearLayout>
+
+
+        <include
+            android:id="@+id/signupwithEmailmailBtn"
+            layout="@layout/layout_blank_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/llDoNotHaveAccount" />
+
+        <include
+            android:id="@+id/layoutSignupWithPhone"
+            layout="@layout/layout_blank_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            android:layout_marginBottom="@dimen/dp_150"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signupwithEmailmailBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
+

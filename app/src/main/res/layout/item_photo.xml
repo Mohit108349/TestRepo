@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.makeramen.roundedimageview.RoundedImageView android:id="@+id/ivPhoto"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_margin="2dp"
+    android:scaleType="centerCrop"
+    android:src="@drawable/ic_demo"
+
+    app:riv_corner_radius="6dp"
+    app:riv_mutate_background="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />

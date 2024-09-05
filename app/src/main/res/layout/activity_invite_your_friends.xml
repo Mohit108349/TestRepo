@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.dashboard.friends.InviteYourFriendsActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp_15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp_15" />
+
+    <include
+        android:id="@+id/toolbarInviteFriends"
+        layout="@layout/layout_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart" />
+
+    <ImageView
+        android:id="@+id/ivInvite"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_150"
+        android:src="@mipmap/ic_refer_friend"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/toolbarInviteFriends" />
+
+    <com.familypedia.utils.SemiBoldTextViewGoldPlay
+        android:id="@+id/tvInviteYourFriendsVia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/invite_your_friends_via"
+        android:textColor="@color/color_ebony"
+        android:textSize="@dimen/sp_18"
+
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/ivInvite" />
+
+    <LinearLayout
+        android:id="@+id/llViaWhatsApp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/bg_share_friends_list"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/dp_15"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/tvInviteYourFriendsVia"
+        android:paddingHorizontal="@dimen/dp_10">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_23"
+            android:layout_height="@dimen/dp_23"
+            app:srcCompat="@drawable/ic_whatsapp" />
+
+        <com.familypedia.utils.MediumTextViewGoldPlay
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_weight="1"
+            android:textColor="@color/color_jumbo"
+            android:text="@string/whatsapp"
+            android:textSize="@dimen/sp_15" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_next_arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/bg_share_friends_list"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/dp_15"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/llViaWhatsApp"
+        android:paddingHorizontal="@dimen/dp_10">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_23"
+            android:layout_height="@dimen/dp_23"
+            app:srcCompat="@drawable/ic_message" />
+
+        <com.familypedia.utils.MediumTextViewGoldPlay
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_weight="1"
+            android:textColor="@color/color_jumbo"
+            android:text="@string/message"
+            android:textSize="@dimen/sp_15" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_next_arrow" />
+    </LinearLayout>
+     <LinearLayout
+        android:id="@+id/llMore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/bg_share_friends_list"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/dp_15"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/llMessage"
+        android:paddingHorizontal="@dimen/dp_10">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_23"
+            android:layout_height="@dimen/dp_23"
+            app:srcCompat="@drawable/ic_more" />
+
+        <com.familypedia.utils.MediumTextViewGoldPlay
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_weight="1"
+            android:textColor="@color/color_jumbo"
+            android:text="@string/more"
+            android:textSize="@dimen/sp_15" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_next_arrow" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llCopyLink"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/bg_share_friends_list"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/dp_15"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/llMore"
+        android:paddingHorizontal="@dimen/dp_10">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_23"
+            android:layout_height="@dimen/dp_23"
+            app:srcCompat="@drawable/ic_copy_link" />
+
+        <com.familypedia.utils.MediumTextViewGoldPlay
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_weight="1"
+            android:textColor="@color/color_jumbo"
+            android:text="@string/copy_link"
+            android:textSize="@dimen/sp_15" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_next_arrow" />
+    </LinearLayout>
+
+    <com.familypedia.utils.MediumTextViewGoldPlay
+        android:id="@+id/viewInvitedFriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/color_blue"
+        android:text="@string/view_your_invited_friends"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/dp_30"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

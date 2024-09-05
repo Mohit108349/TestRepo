@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemUser"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_10"
+    android:layout_marginVertical="@dimen/dp_10"
+    android:background="@drawable/shape_rounded_corner"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="horizontal"
+ android:padding="@dimen/sp_8">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserImage"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.familypedia.utils.SemiBoldTextViewGoldPlay
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_6"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:text="@string/n_a"
+                android:textColor="@color/color_ebony"
+                android:textSize="@dimen/sp_13" />
+
+            <com.familypedia.utils.RegularTextViewGoldPlay
+                android:id="@+id/tvUserId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_6"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:singleLine="true"
+                android:text="@string/n_a"
+                android:layout_marginTop="@dimen/dp_4"
+                android:textColor="@color/color_ebony"
+                android:textSize="@dimen/sp_13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal">
+
+            <com.familypedia.utils.SemiBoldTextViewGoldPlay
+                android:id="@+id/btnFriendStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shape_button_semi_rect"
+                android:paddingHorizontal="@dimen/dp_10"
+                android:paddingVertical="@dimen/dp_10"
+                android:text="@string/n_a"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                android:visibility="visible"
+
+                />
+
+            <com.familypedia.utils.SemiBoldTextViewGoldPlay
+                android:id="@+id/btnFirendAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shape_button_semi_rect"
+                android:paddingHorizontal="@dimen/dp_10"
+                android:paddingVertical="@dimen/dp_10"
+                android:text="@string/n_a"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone" />
+
+            <com.familypedia.utils.SemiBoldTextViewGoldPlay
+                android:id="@+id/btnFirendReject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shape_button_semi_rect_grey"
+                android:paddingHorizontal="@dimen/dp_10"
+                android:paddingVertical="@dimen/dp_10"
+                android:text="@string/n_a"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>

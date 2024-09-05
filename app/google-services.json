@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "86739707761",
+    "project_id": "familypedia-cd302",
+    "storage_bucket": "familypedia-cd302.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86739707761:android:156315be38e7a366a478d0",
+        "android_client_info": {
+          "package_name": "com.familypedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "86739707761-3fpd7hs072v3vnlls04q7dmmiqspubs3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.familypedia",
+            "certificate_hash": "784b97410e9b1cde88f5508b7d6424c731e67601"
+          }
+        },
+        {
+          "client_id": "86739707761-v0dnenr02qdpv70c1deb3ot855rr0unp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ9XhYriwtsAE2KTZs1f1roqmj59b6pEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "86739707761-v0dnenr02qdpv70c1deb3ot855rr0unp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

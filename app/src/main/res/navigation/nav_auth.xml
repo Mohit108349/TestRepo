@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/authLoginTypeFragment">
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.familypedia.view.auth.LoginWithEmailFragment"
+        android:label="Login">
+        <action
+            android:id="@+id/actionOpenSignup"
+            app:destination="@id/signupWithEmailFragment"
+
+            app:enterAnim="@anim/anim_x_100_to_0"
+            app:popExitAnim="@anim/anim_x_0_to_100"
+            app:popEnterAnim="@anim/anim_x_minus_100_to_0"
+            app:exitAnim="@anim/anim_x_0_to_minus_100"
+            />
+        <action
+            android:id="@+id/actionOpenForgotPassword"
+            app:destination="@id/forgotPasswordFragment"
+
+            app:enterAnim="@anim/anim_x_100_to_0"
+            app:popExitAnim="@anim/anim_x_0_to_100"
+            app:popEnterAnim="@anim/anim_x_minus_100_to_0"
+            app:exitAnim="@anim/anim_x_0_to_minus_100"
+            />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/signupWithEmailFragment"
+        android:name="com.familypedia.view.auth.SignupWithEmailFragment"
+        android:label="SignUp">
+        <action
+            android:id="@+id/signupWithEmailFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+        <action
+            android:id="@+id/action_signupWithEmailFragment_to_signUpWithPhoneFragment"
+            app:destination="@id/signUpWithPhoneFragment"
+            app:popUpTo="@+id/signUpWithPhoneFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.familypedia.view.auth.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/authLoginTypeFragment"
+        android:name="com.familypedia.view.auth.AuthLoginTypeFragment"
+        android:label="AuthLoginTypeFragment" >
+        <action
+            android:id="@+id/action_authLoginTypeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_authLoginTypeFragment_to_loginWithPhoneFragment"
+            app:destination="@id/loginWithPhoneFragment" />
+
+        <action
+            android:id="@+id/action_authLoginTypeFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+
+        <action
+            android:id="@+id/action_authLoginTypeFragment_to_signupWithEmailFragment"
+            app:destination="@id/signupWithEmailFragment" />
+        <action
+            android:id="@+id/action_authLoginTypeFragment_to_signUpWithPhoneFragment"
+            app:destination="@id/signUpWithPhoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginWithPhoneFragment"
+        android:name="com.familypedia.view.auth.phone_login.LoginWithPhoneFragment"
+        android:label="LoginWithPhoneFragment" >
+
+<!--        <action-->
+<!--            android:id="@+id/action_loginWithPhoneFragment_to_signupWithEmailFragment"-->
+<!--            app:destination="@id/signupWithEmailFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_loginWithPhoneFragment_to_signUpWithPhoneFragment"-->
+<!--            app:destination="@id/signUpWithPhoneFragment" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.familypedia.view.auth.phone_login.VerificationFragment"
+        android:label="fragment_verification"
+        tools:layout="@layout/fragment_verification">
+
+        <argument app:argType="integer"
+            app:nullable="false"
+            android:name="comeFrom"/>
+
+
+        <argument app:argType="string"
+            app:nullable="false"
+            android:name="id"/>
+        <argument app:argType="string"
+            app:nullable="true"
+            android:name="cc"/>
+    </fragment>
+    <fragment
+        android:id="@+id/signUpWithPhoneFragment"
+        android:name="com.familypedia.view.auth.phone_login.SignUpWithPhoneFragment"
+        android:label="SignUpWithPhoneFragment" >
+
+        <action
+            android:id="@+id/signUpWithPhoneFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment"
+ />
+        <action
+            android:id="@+id/action_signUpWithPhoneFragment_to_signupWithEmailFragment"
+            app:destination="@id/signupWithEmailFragment"
+            app:popUpTo="@+id/signupWithEmailFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>
